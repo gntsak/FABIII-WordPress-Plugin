@@ -45,7 +45,7 @@ function fab3_get_bailiffs_list() {
 	 */
 	$args = array(
 		'posts_per_page' 	=> -1,
-		'post_type'		 	=> 'kohtutaiturids',
+		'post_type'		 	=> 'post type name',
 		'orderby'		 	=> 'ID',
 		'order'			 	=> 'ASC',
 		'suppress_filters'  => false
@@ -70,10 +70,10 @@ function fab3_get_bailiffs_list() {
 				array(
 					"name" 			=> $item->post_title,
 					"lang" 			=> get_field('languages_spoken', $item->ID),
-					"address" 		=> get_field('koh_adress', $item->ID),
+					"address" 		=> get_field('address', $item->ID),
 					"postalCode" 	=> get_field('postal_code', $item->ID),
-					"municipality"  => get_field('koh_linn', $item->ID),
-					"tel"			=> get_field('koh_phone', $item->ID),
+					"municipality"  => get_field('municipality', $item->ID),
+					"tel"			=> get_field('phone', $item->ID),
 				)
 			)
 		);
@@ -101,7 +101,7 @@ function fab3_get_bailiffs_postalcode_list() {
 	if ( isset($_REQUEST['postalCode']) ) {
 		$args = array(
 			'posts_per_page' 	=> -1,
-			'post_type'		 	=> 'kohtutaiturids',
+			'post_type'		 	=> 'post type name',
 			'orderby'		 	=> 'ID',
 			'order'			 	=> 'ASC',
 			'meta_key'		 	=> 'postal_code',
@@ -129,10 +129,10 @@ function fab3_get_bailiffs_postalcode_list() {
 				array(
 					"name" 			=> $item->post_title,
 					"lang" 			=> get_field('languages_spoken', $item->ID),
-					"address" 		=> get_field('koh_adress', $item->ID),
+					"address" 		=> get_field('address', $item->ID),
 					"postalCode" 	=> get_field('postal_code', $item->ID),
-					"municipality"  => get_field('koh_linn', $item->ID),
-					"tel"			=> get_field('koh_phone', $item->ID),
+					"municipality"  => get_field('municipality', $item->ID),
+					"tel"			=> get_field('phone', $item->ID),
 				)
 			)
 		);
