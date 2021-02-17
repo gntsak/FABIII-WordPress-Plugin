@@ -7,6 +7,6 @@ This solution aims to satisfy the integration of National Registries with existi
 
 In order for the Plugin to be used, the **$args** of **get_posts** as well as of the **get_field** should be edited based on the installation's **custom post types** and the **custom fields**.
 
-Also, the functionget_field is used by the ACF Plugin. If the installation uses a fifferent way to create the data, the function **get_post_meta()** should be used.
+Also, the function get_field is used by the ACF Plugin. If the installation uses a fifferent way to create the data, the function **get_post_meta()** should be used.
 
 Contact: fab3@it.auth.gr
